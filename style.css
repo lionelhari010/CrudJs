@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+#mainBtn {
+  margin-bottom: 30px;
+}
+
+.but-align {
+  text-align: center;
+}
+.buts-align {
+  display: flex;
+  justify-content: space-around;
+}
+body table tr:nth-child(even) {
+  background-color: lightgray;
+}

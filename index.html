@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,14 +26,8 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
+    <h1 class="mb-5">CRUD OPERATION</h1>
     <div id="mainBtn">
-      <button
-        type="button"
-        class="btn btn-primary btn-lg"
-        style="margin-right: 30px"
-      >
-        Save
-      </button>
       <button
         type="button"
         class="btn btn-primary btn-lg"
@@ -35,19 +35,19 @@
         data-bs-target="#exampleModal"
         onclick="add1()"
       >
-        Edit
+        ADD
       </button>
     </div>
     <table
       border="2"
       rule="all"
-      id="display"
       width="500px"
-      class="table table-hover table-bordered"
-      cell-padding="15px"
+      class="table table-hover table-striped table-bordered"
+      cell-padding="10px"
     >
       <thead class="but-align" style="background-color: gray">
         <tr>
+          <th scope="col" style="display: none">id</th>
           <th scope="col">S.NO</th>
           <th scope="col">Action Btn</th>
           <th scope="col">Name</th>
@@ -55,6 +55,7 @@
           <th scope="col">Address</th>
         </tr>
       </thead>
+      <tbody id="display"></tbody>
     </table>
     <!-- Modal -->
     <div
@@ -129,7 +130,7 @@
               id="s2"
               onclick="editRow1()"
             >
-              Save Changes
+              UPDATE
             </button>
             <button
               type="button"
